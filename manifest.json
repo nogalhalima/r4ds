@@ -1,0 +1,5 @@
+rsconnect::writeManifest(
+    appDir = ".", # the directory containing your content
+    appFiles = c("app.R", "helpers.R", "data/samples.csv"), # any supporting files
+    appPrimaryDoc = "app.R", # if there are more than one possible documents, e.g. if you have multiple RMDs
+)
