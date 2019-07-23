@@ -1,18 +1,25 @@
 bookdown::gitbook:
-  includes:
-    in_header: [ga_script.html]
+  dev: svglite
+  css: css/style.css
+  split_by: section
   config:
     toc:
       collapse: section
       before: |
         <li><strong><a href="./">R for Data Science</a></strong></li>
-    edit:
-      download: [pdf, epub, mobi]
-      link: https://github.com/hadley/r4ds/edit/master/%s
-      text: "Edit"
+    download: [epub, mobi]
+    edit: https://github.com/hadley/r4ds/edit/master/%s
     sharing: no
+bookdown::html_chapters:
   css: r4ds.css
 
 bookdown::pdf_book:
   latex_engine: "xelatex"
+
+bookdown::epub_book:
+  dev: svglite
+  stylesheet: r4ds.css
+
+
+
 
